@@ -157,7 +157,7 @@ export default function Home() {
               <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center text-primary font-bold text-xl shrink-0">HC</div>
               <div>
                 <p className="text-gray-500 text-sm">Selamat datang di</p>
-                <h2 className="text-xl md:text-3xl font-bold text-gray-900">CV. Hidayah Canopy</h2>
+                <h2 className="text-xl md:text-3xl font-bold text-gray-900">Hidayah Canopy</h2>
               </div>
             </div>
             
