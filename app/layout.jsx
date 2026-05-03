@@ -3,9 +3,14 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer' // <-- Import Footer yang baru dibuat
 
 export const metadata = {
-  title: 'Hidayah Canopy',
-  description: 'Jasa Pembuatan Canopy Profesional',
-}
+  title: 'Hidayah Canopy | Jasa Pembuatan Canopy Profesional',
+  description: 'Spesialis canopy membran, alderon, peredam panas, dan penangkal petir.',
+  
+  // TAMBAHKAN BAGIAN INI:
+  verification: {
+    google: 'wzEV8vjz48aeh4m433Nx0Qt84MkzoM3u0y5m1yQYZMk',
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
