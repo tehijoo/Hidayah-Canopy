@@ -479,7 +479,7 @@ export default function Home() {
                 
                 <div 
                   className="w-48 h-48 md:w-64 md:h-64 md:absolute md:-bottom-4 md:right-[-60px] mt-8 md:mt-0 bg-contain bg-no-repeat bg-bottom z-20 opacity-90"
-                  style={{ backgroundImage: "url('/pekerja.jpeg')" }} 
+                  style={{ backgroundImage: "url('/layanan-membran.jpeg')" }} 
                 ></div>
               </div>
 
@@ -860,7 +860,7 @@ export default function Home() {
                 {
                   title: "Jasa Pembuatan Kanopi Profesional",
                   date: "22 November 2026",
-                  image: "/pekerja.jpeg",
+                  image: "/galeri-7.jpeg",
                   slug: "jasa-pembuatan-kanopi-profesional"
                 },
                 {
