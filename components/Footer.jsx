@@ -79,7 +79,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-12">
         <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-600">
           <p>© {new Date().getFullYear()} Hidayah Canopy. All Rights Reserved.</p>
-          <TehijooCredit variant="text" theme="light" accent="var(--color-primary, #006295)" />
+          <TehijooCredit variant="text" from="Hidayah Canopy" theme="light" accent="var(--color-primary, #006295)" />
         </div>
       </div>
     </footer>
