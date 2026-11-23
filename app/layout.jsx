@@ -1,6 +1,11 @@
 import './globals.css'
-import Header from '@/components/Header' 
+import Script from 'next/script'
+import Header from '@/components/Header'
 import Footer from '@/components/Footer' // <-- Import Footer yang baru dibuat
+
+// Google Ads: ID tag dan label konversi "Lead panggilan telepon"
+const GOOGLE_ADS_ID = 'AW-18494868344'
+const GOOGLE_ADS_LEAD = 'AW-18494868344/K7FSCOCy25IdEPiWhfNE'
 
 export const metadata = {
   title: 'Hidayah Canopy | Jasa Pembuatan Canopy Profesional',
@@ -28,6 +33,32 @@ export default function RootLayout({ children }) {
 
         {/* Footer akan selalu muncul di bawah di setiap halaman */}
         <Footer />
+
+        {/* Google Ads: tag Google + konversi saat pengunjung klik tombol WhatsApp/telepon */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_ADS_ID}');
+
+          window.reportLeadConversion = function () {
+            gtag('event', 'conversion', {
+              'send_to': '${GOOGLE_ADS_LEAD}',
+              'value': 3000.0,
+              'currency': 'IDR'
+            });
+          };
+
+          document.addEventListener('click', function (e) {
+            var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+            if (a) window.reportLeadConversion();
+          });
+        `}</Script>
 
       </body>
     </html>
