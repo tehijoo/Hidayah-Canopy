@@ -32,7 +32,10 @@ export default function KontakPage() {
     const textMessage = `Halo Hidayah Canopy,%0A%0ASaya ingin bertanya mengenai pembuatan kanopi. Berikut data diri saya:%0A%0A*Nama:* ${formData.nama}%0A*Email:* ${formData.email || '-' }%0A*No HP:* ${formData.phone}%0A*Pesan:* ${formData.pesan}%0A%0ATerima kasih.`;
 
     const waLink = `https://wa.me/${targetWA}?text=${textMessage}`;
-    
+
+    // Catat konversi Google Ads (formulir terkirim ke WhatsApp)
+    if (typeof window.reportLeadConversion === 'function') window.reportLeadConversion();
+
     // Membuka tab WhatsApp baru
     window.open(waLink, '_blank');
   };
